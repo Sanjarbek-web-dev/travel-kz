@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism WEB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="main-body">
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="Logo" />
+                    <p class="kaz-1">
+                        <span>Tourism</span> <span class="kaz ">Kaz</span>
+                    </p>
+                </div>
+                <div class="header-links" id="header-links">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Поиск</a></li>
+                        <li><a href="#">Стать партнером</a></li>
+                        <li>
+                            <span class="kaz vector cursor" id="ru">RU</span>
+                            <span class="cursor" id="kz">KZ</span>
+                        </li>
+                        <button class="savebtn">Скачать</button>
+                    </ul>
+                </div>
+                <div class="toggle-btn" id="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>   
+                <div id="close-btn1" class="close-btn1">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </div>
+            </header>
+        </div>
+        <div class="container bg-container">
+            <div class="content-main">
+                <h1 class="main-title">
+                    Забронируйте тур <br />
+                    в приложении TourismKaz
+                </h1>
+
+                <div class="places">
+                    <div class="places-1">
+                        <div class="region">
+                            <h4>Регион</h4>
+                            <button>
+                                <input type="text" name="select" placeholder="Empty" />
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </div>
+                        <div class="date">
+                            <h4>Дата поездки</h4>
+                            <input type="date" name="date" placeholder="Search by date" />
+                        </div>
+                    </div>
+                    <div class="places-2">
+                        <div>
+                            <h4 class="p0">Количество человек</h4>
+                            <div class="count number-person">
+                                <button id="decr" onclick="changeNumber(decr)">-</button><span id="add">0</span><button id="incr" onclick="changeNumber(incr)">+</button>
+                            </div>
+                        </div>
+                        <div class="search-boxbtn">
+                            <button class="search">Найти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="lineH">Интересные места</h1>
+        <div class="slider small-content" id="slider">
+            <div class="slide" id="slide">
+                <div class="small-content-item">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+                <div class="small-content-item">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+                <div class="small-content-item">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+                <div class="small-content-item">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+                <div class="small-content-item">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+                <div class="small-content-item las">
+                    <img src="./img/Rectangle 440.svg" alt="" />
+                    <p class="small-title">Природный объект</p>
+                    <h5>Чарынский каньон</h5>
+                    <h5>от 3000₸</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid-f">
+        <div class="container">
+            <h1 class="category-title">Популяные разделы</h1>
+            <div class="slider-wrap">
+                <div class="slider-main" id="slider-main">
+                    <div class="slider-item" id="slider-item">
+                        <img class="item1" src="./img/Category.png" alt="" />
+                        <img class="item1" src="./img/Category (1).png" alt="" />
+                        <img class="item1" src="./img/Category (2).png" alt="" />
+                        <img class="item1" src="./img/Category (3).png" alt="" />
+                        <img class="item1" src="./img/Category (4).png" alt="" />
+                        <img class="item1" src="./img/Category (5).png" alt="" />
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button type="button" aria-hidden="true" class="left-prev" onclick="prev()">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="pagination-1">
+                    <button type="button" aria-hidden="true" class="next-prev" onclick="next()">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="category-title">Наши партнеры <br> которые помогут вам</h1>
+            <!-- <div class="slider-wrap">
+                <div class="slider-main" id="slider-main">
+                    <div class="slider-item" id="slider-item">
+                        <img class="item1"  src="./img/Category.png" alt="">
+                        <img class="item1"  src="./img/Category (1).png" alt="">
+                        <img class="item1"  src="./img/Category (2).png" alt="">
+                        <img class="item1"  src="./img/Category (3).png" alt="">
+                        <img class="item1"  src="./img/Category (4).png" alt="">
+                        <img class="item1"  src="./img/Category (5).png" alt="">
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button type="button" aria-hidden="true" class="left-prev" onclick=prev()><i class="fa-solid fa-chevron-left"></i></button>
+                </div>
+                <div class="pagination-1">
+                    <button type="button" aria-hidden="true" class="next-prev" onclick=next()><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div> -->
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/Travel.svg" alt="">
+                        <div class="travel-infor">
+                            <h5>Коктем</h5>
+                            <p>Тур агенство</p>
+                            <p><i class="fa-solid fa-star star"></i>4.2 (120)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aksiya-banner-large">
+        <div class="container">
+            <h1 class="aksiya-title">Акции</h1>
+            <div class="aksiya-content">
+                <div class="aksiya-item">
+                    <div class="aksiya-item-title">
+                        <div class="disF">
+                            <img src="./img/alBulak.svg" alt="">
+                            <h3 class="aks-title-des">Ak Bulak Health Slim Fit</h3>
+                        </div>
+                        <div>
+                            <span class="date-aksiya">до 15 января</span>
+                        </div>
+                    </div>
+                    <div class="aksiya-desc">
+                        <img src="./img/home.svg" alt="">
+                        <p>Восстановите силы и здоровье! Программа ​Ak Bulak Health Slim Fit для оздоровления и
+                        преображения в отеле высокогорного курорта​ «Ак Булак»! Скидка до 40%!</p>
+                    </div>
+                </div>
+                <div class="aksiya-item">
+                    <div class="aksiya-item-title">
+                        <div class="disF">
+                            <img src="./img/alBulak.svg" alt="">
+                            <h3 class="aks-title-des">Ak Bulak Health Slim Fit</h3>
+                        </div>
+                        <div>
+                            <span class="date-aksiya">до 15 января</span>
+                        </div>
+                    </div>
+                    <div class="aksiya-desc">
+                        <img src="./img/home.svg" alt="">
+                        <p>Восстановите силы и здоровье! Программа ​Ak Bulak Health Slim Fit для оздоровления и
+                        преображения в отеле высокогорного курорта​ «Ак Булак»! Скидка до 40%!</p>
+                    </div>
+                </div>
+                <div class="aksiya-item">
+                    <div class="aksiya-item-title">
+                        <div class="disF">
+                            <img src="./img/aksiya-tarvel.svg" alt="">
+                            <h3 class="aks-title-des">Kolsaytur</h3>
+                        </div>
+                        <div>
+                            <span class="date-aksiya">до 15 января</span>
+                        </div>
+                    </div>
+                    <div class="aksiya-desc">
+                        <img src="./img/aksiya-lastimg.svg" alt="">
+                        <p>Высокая казахская кухня: какие блюда непременно необходимо попробовать?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="last-banner">
+        <div class="container last-content">
+            <div class="form-content">
+                <h1>Стать партнером</h1>
+                <p>
+                    Если вы хотите стать нашим партнером и разместить свой
+                    уникальный тур в нашем приложении, оставьте заявку,и мы с вами свяжемся
+                </p>
+                <form action="" class="form">
+                    <input type="text" placeholder="ФИО" class="yourName">
+                    <input type="number" name="number" placeholder="+7 (701) 234 56 78" class="phoneNumber">
+                    <button class="submit" type="submit">Далее</button>
+                </form>
+            </div>
+            <div class="phone-visible">
+                <img src="./img/main.svg" alt="">
+                <img src="./img/iphone.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="first-footer">
+                <div class="logo logo-footer">
+                    <img src="./img/logo.svg" alt="">
+                    <p class="kaz-2">
+                        <span>Tourism</span> <span class="kaz ">Kaz</span>
+                    </p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><img src="./img/Group.png" alt=""></a></li>
+                        <li><a href="#"><img src="./img/g10.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="all-reserved">
+                <h4>TourismKaz.kz 2022. Все права защищены</h4>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
